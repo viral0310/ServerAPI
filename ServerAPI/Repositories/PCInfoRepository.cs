@@ -21,11 +21,15 @@ namespace ServerAPI.Repositories
             return await _context.PCInfos.ToListAsync();
         }
 
-        public async Task<PCInfo> GetByIdAsync(int id)
+       public async Task<PCInfo> GetByIdAsync(int id)
         {
-            return await _context.PCInfos.FindAsync(id);
+            var pcInfo = await _context.PCInfos.FindAsync(id);
+            if (pcInfo == null)
+            {
+                throw new KeyNotFoundException($"PCInfo with ID {id} not found.");
+            }
+            return pcInfo;
         }
-
         public async Task AddAsync(PCInfo pcInfo)
         {
             _context.PCInfos.Add(pcInfo);
