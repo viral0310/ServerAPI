@@ -1,34 +1,34 @@
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using ServerAPI.Data;
 using ServerAPI.Models;
+using ServerAPI.Repositories;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace ServerAPI.Controllers
 {
-    [Route("api/[controller]")]
     [ApiController]
+    [Route("api/[controller]")]
     public class PCInfoController : ControllerBase
     {
-        private readonly PCInfoContext _context;
+        private readonly IPCInfoRepository _pcInfoRepository;
 
-        public PCInfoController(PCInfoContext context)
+        public PCInfoController(IPCInfoRepository pcInfoRepository)
         {
-            _context = context;
+            _pcInfoRepository = pcInfoRepository;
         }
 
+        // GET: api/pcinfo
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<PCInfo>>> GetPCInfos()
+        public async Task<IEnumerable<PCInfo>> Get()
         {
-            return await _context.PCInfos.ToListAsync();
+            return await _pcInfoRepository.GetAllAsync();
         }
 
+        // GET: api/pcinfo/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<PCInfo>> GetPCInfo(int id)
+        public async Task<ActionResult<PCInfo>> GetById(int id)
         {
-            var pcInfo = await _context.PCInfos.FindAsync(id);
+            var pcInfo = await _pcInfoRepository.GetByIdAsync(id);
 
             if (pcInfo == null)
             {
@@ -38,13 +38,36 @@ namespace ServerAPI.Controllers
             return pcInfo;
         }
 
+        // POST: api/pcinfo
         [HttpPost]
-        public async Task<ActionResult<PCInfo>> PostPCInfo(PCInfo pcInfo)
+        public async Task<IActionResult> Post(PCInfo pcInfo)
         {
-            _context.PCInfos.Add(pcInfo);
-            await _context.SaveChangesAsync();
+            await _pcInfoRepository.AddAsync(pcInfo);
 
-            return CreatedAtAction(nameof(GetPCInfo), new { id = pcInfo.Id }, pcInfo);
+            return CreatedAtAction(nameof(GetById), new { id = pcInfo.Id }, pcInfo);
+        }
+
+        // PUT: api/pcinfo/5
+        [HttpPut("{id}")]
+        public async Task<IActionResult> Put(int id, PCInfo pcInfo)
+        {
+            if (id != pcInfo.Id)
+            {
+                return BadRequest();
+            }
+
+            await _pcInfoRepository.UpdateAsync(pcInfo);
+
+            return NoContent();
+        }
+
+        // DELETE: api/pcinfo/5
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> Delete(int id)
+        {
+            await _pcInfoRepository.DeleteAsync(id);
+
+            return NoContent();
         }
     }
 }

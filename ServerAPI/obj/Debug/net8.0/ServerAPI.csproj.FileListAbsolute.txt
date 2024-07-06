@@ -166,3 +166,4 @@ G:\CLI\Data\ServerAPI\bin\Debug\net8.0\Microsoft.AspNetCore.JsonPatch.dll
 G:\CLI\Data\ServerAPI\bin\Debug\net8.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 G:\CLI\Data\ServerAPI\bin\Debug\net8.0\Newtonsoft.Json.dll
 G:\CLI\Data\ServerAPI\bin\Debug\net8.0\Newtonsoft.Json.Bson.dll
+G:\CLI\Data\ServerAPI\obj\Debug\net8.0\ServerAPI.sourcelink.json

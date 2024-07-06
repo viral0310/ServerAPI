@@ -20,6 +20,7 @@ namespace ServerAPI.Configurations
             app.UseSwaggerUI(c =>
             {
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "PC Info API V1");
+                c.RoutePrefix = ""; // Set Swagger UI at the app's root URL
             });
         }
     }

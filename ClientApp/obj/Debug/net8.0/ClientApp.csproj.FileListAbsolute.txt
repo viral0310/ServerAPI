@@ -12,3 +12,4 @@ G:\CLI\Data\ClientApp\obj\Debug\net8.0\refint\ClientApp.dll
 G:\CLI\Data\ClientApp\obj\Debug\net8.0\ClientApp.pdb
 G:\CLI\Data\ClientApp\obj\Debug\net8.0\ClientApp.genruntimeconfig.cache
 G:\CLI\Data\ClientApp\obj\Debug\net8.0\ref\ClientApp.dll
+G:\CLI\Data\ClientApp\obj\Debug\net8.0\ClientApp.sourcelink.json
