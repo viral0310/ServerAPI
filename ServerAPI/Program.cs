@@ -4,7 +4,6 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using ServerAPI.Data;
 using ServerAPI.Repositories;
-using ServerAPI.Configurations;
 
 var builder = WebApplication.CreateBuilder(args);
 
