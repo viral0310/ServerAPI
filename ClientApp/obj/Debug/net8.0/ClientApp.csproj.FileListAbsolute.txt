@@ -1,0 +1,14 @@
+G:\CLI\Data\ClientApp\bin\Debug\net8.0\ClientApp.exe
+G:\CLI\Data\ClientApp\bin\Debug\net8.0\ClientApp.deps.json
+G:\CLI\Data\ClientApp\bin\Debug\net8.0\ClientApp.runtimeconfig.json
+G:\CLI\Data\ClientApp\bin\Debug\net8.0\ClientApp.dll
+G:\CLI\Data\ClientApp\bin\Debug\net8.0\ClientApp.pdb
+G:\CLI\Data\ClientApp\obj\Debug\net8.0\ClientApp.GeneratedMSBuildEditorConfig.editorconfig
+G:\CLI\Data\ClientApp\obj\Debug\net8.0\ClientApp.AssemblyInfoInputs.cache
+G:\CLI\Data\ClientApp\obj\Debug\net8.0\ClientApp.AssemblyInfo.cs
+G:\CLI\Data\ClientApp\obj\Debug\net8.0\ClientApp.csproj.CoreCompileInputs.cache
+G:\CLI\Data\ClientApp\obj\Debug\net8.0\ClientApp.dll
+G:\CLI\Data\ClientApp\obj\Debug\net8.0\refint\ClientApp.dll
+G:\CLI\Data\ClientApp\obj\Debug\net8.0\ClientApp.pdb
+G:\CLI\Data\ClientApp\obj\Debug\net8.0\ClientApp.genruntimeconfig.cache
+G:\CLI\Data\ClientApp\obj\Debug\net8.0\ref\ClientApp.dll
